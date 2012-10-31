@@ -16,7 +16,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
 
   - name: bootstrapper1
     processapp: [bootstrapper1, ion.processes.bootstrap.bootstrapper, Bootstrapper]
@@ -33,7 +33,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
 
   - name: directory
     processapp: [directory, ion.services.coi.directory_service, DirectoryService]
@@ -42,7 +42,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
 
   - name: identity_management
     processapp: [identity_management, ion.services.coi.identity_management_service, IdentityManagementService]
@@ -51,7 +51,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
 
   - name: policy_management
     processapp: [policy_management, ion.services.coi.policy_management_service, PolicyManagementService]
@@ -60,7 +60,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
 
   - name: exchange_management
     processapp: [exchange_management, ion.services.coi.exchange_management_service, ExchangeManagementService]
@@ -69,7 +69,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
 
   - name: org_management
     processapp: [org_management, ion.services.coi.org_management_service, OrgManagementService]
@@ -78,7 +78,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
 
 
   ##################################
@@ -93,7 +93,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
 
 #  - name: conversation_management
 #    processapp: [conversation_management, ion.services.coi.conversation_management_service, ConversationManagementService]
@@ -107,7 +107,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
 
   - name: resource_management
     processapp: [resource_management, ion.services.coi.resource_management_service, ResourceManagementService]
@@ -116,7 +116,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
 
   - name: service_management
     processapp: [service_management, ion.services.coi.service_management_service, ServiceManagementService]
@@ -125,7 +125,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
 
 
   #### CEI Services
@@ -170,7 +170,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
 
   - name: pubsub_management
     processapp: [pubsub_management, ion.services.dm.distribution.pubsub_management_service, PubsubManagementService]
@@ -179,7 +179,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
 
 
   - name: ingestion_management
@@ -189,7 +189,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
 
   - name: data_retriever
     processapp: [data_retriever, ion.services.dm.inventory.data_retriever_service, DataRetrieverService]
@@ -198,7 +198,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
 
   - name: index_management
     processapp: [index_management, ion.services.dm.inventory.index_management_service, IndexManagementService]
@@ -207,7 +207,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
 
   - name: user_notification
     processapp: [user_notification, ion.services.dm.presentation.user_notification_service, UserNotificationService]
@@ -216,7 +216,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
 
   - name: preservation_management
     processapp: [preservation_management, ion.services.dm.preservation.preservation_management_service, PreservationManagementService]
@@ -225,7 +225,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
 
   - name: catalog_management
     processapp: [catalog_management, ion.services.dm.presentation.catalog_management_service, CatalogManagementService]
@@ -234,7 +234,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
 
   - name: discovery
     processapp: [discovery, ion.services.dm.presentation.discovery_service, DiscoveryService]
@@ -243,7 +243,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
 
 
   ##### SA SERVICES
@@ -254,7 +254,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
 
   - name: data_product_management
     processapp: [data_product_management, ion.services.sa.product.data_product_management_service, DataProductManagementService]
@@ -263,7 +263,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
 
   - name: data_process_management
     processapp: [data_process_management, ion.services.sa.process.data_process_management_service, DataProcessManagementService]
@@ -272,7 +272,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
 
   - name: instrument_management
     processapp: [instrument_management, ion.services.sa.instrument.instrument_management_service, InstrumentManagementService]
@@ -281,7 +281,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
 
   - name: observatory_management
     processapp: [observatory_management, ion.services.sa.observatory.observatory_management_service, ObservatoryManagementService]
@@ -290,7 +290,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
 
 
   ##### AS SERVICE
@@ -301,7 +301,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
 
   - name: visualization_service
     description: Responsible managing visualization data
@@ -312,7 +312,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
 
 
   - name: bootstrapper2
@@ -360,8 +360,9 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
           node_exclusive: service_gateway
+          execution_engine_id: service_gateway
 
 
 
