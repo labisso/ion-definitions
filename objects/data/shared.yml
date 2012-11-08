@@ -106,6 +106,7 @@ CodeReport:
 ---
 
 ParameterCharacteristicsReport:
+  parameter_name: ""        # The OOI ParameterDictionary name for the parameter being described.
   applicable_range_max: 0.0 # If the value is only valid within a particular range, this gives the maximum. Must be in same units as the value.
   applicable_range_min: 0.0 # If the value is only valid within a particular range, this gives the minimum. Must be in same units as the value.
   characteristic_name: ""   # Name of the characteristic being reported on. Common ones include accuracy, precision, and drift
@@ -123,14 +124,12 @@ Parameter:
   ioos_category: ""     # Selection from IOOS controlled vocabulary for parameters
   fill_value: ""        # A value used to represent missing or undefined data
   cdm_data_type: ""     # the THREDDS data type
-  variable_reports: ""  # information on the variable accuracy
   axis: ""              # for CF compliance, holds X, Y, Z or T for vars holding lat, lon, depth and time info
   code_reports: []      # provide the meaning of flags in CodeReport objects
   comment: ""
   reference_urls: []    # List of URLs with information about the data parameter
   units: ""
   ion_name: ""
-  parameter_characteristic_reports: []    # list of ParameterCharacteristicsReport objects
   custom_attributes: {}
 
 
@@ -139,22 +138,17 @@ Parameter:
 
 # Describes a physical device with a serial number, such as sensor, instrument and platform. Abstract base type.
 Device: !Extends_TaskableResource
-  # unique identifier of device provided by manufacturer
-  serial_number: ""
-  # Whether the device can be sent a control message
-  controllable: True
-  # References to pages about that individual device (e.g. Configuration diagram)
-  reference_urls: []
-  # the uuid provide by the manufacturer
-  uuid: ""
-  # Contacts for this device.  Multiple contacts are allowed, and can be differentiated by the role_list (e.g. pointOfContact, Provider)
-  contacts: []  # list of ContactInformation objects
-  # A device that does not have a communication port for real-time monitoring
-  #monitorable: True
+  serial_number: ""    # unique identifier of device provided by manufacturer
+  controllable: True   # Whether the device can be sent a control message
+  reference_urls: []   # References to pages about that individual device (e.g. Configuration diagram)
+  uuid: ""             # the uuid provide by the manufacturer
+  contacts: []         # Contacts for this device.
   # Additional attributes required for specific devices
   # Recommended format: {attribute1_name:value, attribute2_name:value}
   # The attribute names should align with the DeviceModel:custom_attributes:name field for this type of device.
   custom_attributes: {}
+  parameter_characteristic_reports: []    # list of ParameterCharacteristicsReport objects
+
 
 # Represents a grouping of devices by common characteristics, e.g. a vendor's make and model. Abstract base type.
 DeviceModel: !Extends_InformationResource
@@ -175,8 +169,6 @@ DeviceModel: !Extends_InformationResource
   manufacturer_url: ""
   # Location(s) where additional information about this model can be obtained
   reference_urls: []
-  # The model name/code provided by the manufacturer
-  model: ""
   # Additional attributes required for specific models
   # Each entry in the list is a CustomAttribute object (see above)
   # A device of this model should then store these attribute values in the corresponding custom_attributes
@@ -184,6 +176,7 @@ DeviceModel: !Extends_InformationResource
   custom_attributes: []
   # tag is the stream name that the driver uses and the value is the paramter dictionary name.
   stream_configuration: {}
+  has_clock: True      # Indicates whether the device has an internal clock or not
 ---
 
 AttachmentType: !enum (values=(ASCII, BLOB, OBJECT), default=ASCII)
@@ -206,6 +199,7 @@ Attachment: !Extends_InformationResource
   modified_by: ""
   # Keywords indicating the type of attachment (e.g. user manual, log)
   keywords: []
+  attachment_size: 0 # size of the attachment content field, in bytes
 
 DeploymentTypeEnum: !enum (values=(PROCESS, SERVICE), default=PROCESS)
 
