@@ -367,6 +367,17 @@ apps:
       path: res/preload/r2_ioc
       categories: ParameterDefs,ParameterDictionary
 
+  - name: lightweight_pydap
+    processapp: [lightweight_pydap, ion.processes.data.externalization.lightweight_pydap, LightweightPyDAP]
+    deploy:
+      bootlevel: 30
+      ha:
+        policy: npreserving
+        parameters:
+          preserve_n: 1
+          node_exclusive: pydap
+          execution_engine_id: pydap
+
   # LAST SERVICE GATEWAY SERVICE
   #
   # Note the use of node_exclusive policy parameter. This is to prevent multiple
