@@ -17,6 +17,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
 
   - name: bootstrapper1
     processapp: [bootstrapper1, ion.processes.bootstrap.bootstrapper, Bootstrapper]
@@ -34,6 +35,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
 
   - name: directory
     processapp: [directory, ion.services.coi.directory_service, DirectoryService]
@@ -43,6 +45,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
 
   - name: identity_management
     processapp: [identity_management, ion.services.coi.identity_management_service, IdentityManagementService]
@@ -52,6 +55,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
 
   - name: policy_management
     processapp: [policy_management, ion.services.coi.policy_management_service, PolicyManagementService]
@@ -61,6 +65,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
 
   - name: exchange_management
     processapp: [exchange_management, ion.services.coi.exchange_management_service, ExchangeManagementService]
@@ -70,6 +75,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
 
   - name: org_management
     processapp: [org_management, ion.services.coi.org_management_service, OrgManagementService]
@@ -79,6 +85,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
 
 
   ##################################
@@ -94,6 +101,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
 
 #  - name: conversation_management
 #    processapp: [conversation_management, ion.services.coi.conversation_management_service, ConversationManagementService]
@@ -108,6 +116,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
 
   - name: resource_management
     processapp: [resource_management, ion.services.coi.resource_management_service, ResourceManagementService]
@@ -117,6 +126,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
 
   - name: service_management
     processapp: [service_management, ion.services.coi.service_management_service, ServiceManagementService]
@@ -126,6 +136,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
 
 
   #### CEI Services
@@ -156,6 +167,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 1
+          queueing_mode: START_ONLY
 #
 #  - name: provisioner
 #    processapp: [provisioner, ion.services.cei.provisioner_service, ProvisionerService]
@@ -171,6 +183,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
 
   - name: pubsub_management
     processapp: [pubsub_management, ion.services.dm.distribution.pubsub_management_service, PubsubManagementService]
@@ -180,6 +193,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
 
 
   - name: ingestion_management
@@ -190,6 +204,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
 
   - name: data_retriever
     processapp: [data_retriever, ion.services.dm.inventory.data_retriever_service, DataRetrieverService]
@@ -199,6 +214,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
 
   - name: index_management
     processapp: [index_management, ion.services.dm.inventory.index_management_service, IndexManagementService]
@@ -208,6 +224,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
 
   - name: user_notification
     processapp: [user_notification, ion.services.dm.presentation.user_notification_service, UserNotificationService]
@@ -217,6 +234,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
 
   - name: event_management
     processapp: [event_management, ion.services.dm.presentation.event_management_service, EventManagementService]
@@ -226,6 +244,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 1
+          queueing_mode: START_ONLY
 
   - name: preservation_management
     processapp: [preservation_management, ion.services.dm.preservation.preservation_management_service, PreservationManagementService]
@@ -235,6 +254,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
 
   - name: catalog_management
     processapp: [catalog_management, ion.services.dm.presentation.catalog_management_service, CatalogManagementService]
@@ -244,6 +264,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
 
   - name: discovery
     processapp: [discovery, ion.services.dm.presentation.discovery_service, DiscoveryService]
@@ -253,6 +274,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
 
 
   ##### SA SERVICES
@@ -264,6 +286,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
 
   - name: data_product_management
     processapp: [data_product_management, ion.services.sa.product.data_product_management_service, DataProductManagementService]
@@ -273,6 +296,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
 
   - name: data_process_management
     processapp: [data_process_management, ion.services.sa.process.data_process_management_service, DataProcessManagementService]
@@ -282,6 +306,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
 
   - name: instrument_management
     processapp: [instrument_management, ion.services.sa.instrument.instrument_management_service, InstrumentManagementService]
@@ -291,6 +316,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
 
   - name: observatory_management
     processapp: [observatory_management, ion.services.sa.observatory.observatory_management_service, ObservatoryManagementService]
@@ -300,6 +326,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
 
 
   ##### AS SERVICE
@@ -311,6 +338,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
 
   - name: visualization_service
     description: Responsible managing visualization data
@@ -322,6 +350,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
 
   - name: bootstrapper2
     processapp: [bootstrapper2, ion.processes.bootstrap.bootstrapper, Bootstrapper]
@@ -361,7 +390,7 @@ apps:
     processapp: [ion_loader1, ion.processes.bootstrap.ion_loader, IONLoader]
     deploy:
       bootlevel: 25
-    config: 
+    config:
       op: load
       scenario: BASE
       path: res/preload/r2_ioc
@@ -375,6 +404,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 1
+          queueing_mode: START_ONLY
           node_exclusive: pydap
           execution_engine_id: pydap
 
@@ -391,6 +421,7 @@ apps:
         policy: npreserving
         parameters:
           preserve_n: 4
+          queueing_mode: START_ONLY
           node_exclusive: service_gateway
           execution_engine_id: service_gateway
 
