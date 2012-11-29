@@ -403,10 +403,10 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 1
+          preserve_n: 4
           queueing_mode: START_ONLY
           node_exclusive: pydap
-          execution_engine_id: pydap
+          execution_engine_id: service_gateway
 
   # LAST SERVICE GATEWAY SERVICE
   #
