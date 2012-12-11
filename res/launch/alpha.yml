@@ -39,6 +39,7 @@ apps:
   bootstrapper1: {}
   bootstrapper2: {}
   parameter_bootstrap: {}
+  policy_bootstrap: {}
 
   # scheduler needs an override block because it is a singleton and
   # may only have one deployed service process at a time.
