@@ -16,7 +16,7 @@ apps:
       ha:
         policy: npreserving
         parameters:
-          preserve_n: 4
+          preserve_n: 1
           queueing_mode: START_ONLY
 
   - name: bootstrapper1
