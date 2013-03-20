@@ -49,6 +49,7 @@ Process: !Extends_TaskableResource
   label: ""     # Human legible label
   proctype: ""  # Indicates a specialized type of CC process
   process_state: !ProcessStateEnum
+  process_round: 0  # Count of restart cycles this process has seen. Used to calculate total ordering of state changes.
   process_configuration: {}
   process_id: ""
   detail: !AbstractProcessDetailType   # instance specific information

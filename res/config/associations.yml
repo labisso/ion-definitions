@@ -147,7 +147,7 @@ AssociationDefinitions:
   - predicate: hasParameterFunction
     domain: [ParameterContext, DataProcessDefinition]
     range: [ParameterFunction]
-    docstring: | 
+    docstring: |
       Links ParameterFunctions to the contexts and the data process framework.
       This may go away and DPDs may link to stream definitions instead.
   - predicate: hasIngestionWorker
@@ -270,6 +270,10 @@ AssociationDefinitions:
     domain: [ProcessDefinition]
     range: [ExecutionEngineDefinition]
     docstring: Indicates compatibility between a ProcessDefinition for and ExecutionEngineDefinition
+  - predicate: onOperationalUnit
+    domain: [Resource]
+    range: [OperationalUnit]
+    docstring: Indicates presence of a resource on an OperationalUnit
 # EOI
   - predicate: hasProvider
     domain: [DataSource]
@@ -290,7 +294,7 @@ AssociationDefinitions:
     domain: [BankCustomer]
     range: [BankAccount]
     docstring: References an account for a customer
-  
+
 
 # This is a configuration for retrieving combinations of associations
 # All predicates must be defined above.

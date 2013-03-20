@@ -14,6 +14,16 @@ DeployableType: !Extends_ExecutableResource
 DeployableUnit: !Extends_ExecutableResource
   tbd: ""
 
+AbstractOperationalUnitDetail:
+
+---
+
+BasicOperationalUnitDetail: !Extends_AbstractOperationalUnitDetail
+  exclusive_tags: []    # Exclusivity tags present on node; used to enforce mutually-exclusive processes
+  ou_properties: {}     # Properties matched against by scheduler
+
 # Describes a running virtual compute node (a virtual machine), an instance of a deployable type and unit.
 OperationalUnit: !Extends_TaskableResource
-  tbd: ""
+  hostname: ""          # Primary hostname of OU
+  ou_type: ""           # OU type
+  detail: !AbstractOperationalUnitDetail

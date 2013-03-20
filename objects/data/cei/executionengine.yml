@@ -6,6 +6,19 @@ ExecutionEngineDefinition: !Extends_ExecutableResource
 # Represents a managed computing platform for executing processes of specified type.
 ExecutionEngine: !Extends_TaskableResource
 
+AbstractExecutionEngineNodeDetail:
+
+---
+
+SlottedExecutionEngineNodeDetail: !Extends_AbstractExecutionEngineNodeDetail
+  slot_count: 0         # Number of execution slots present on EE node
+  slot_properties: {}   # Properties matched against by slot scheduler
+
+# Represents a single taskable unit for executing processes
+ExecutionEngineNode: !Extends_TaskableResource
+  ee_node_type: ""     # Type of execution engine node
+  detail: !AbstractExecutionEngineNodeDetail
+
 # An ION capability container - a special type of execution engine with special treatment
 CapabilityContainer: !Extends_TaskableResource
   version: "1.0"        # Version identifier for this container type
